@@ -4,6 +4,9 @@ import { Logo } from './Logo'
 import { Button } from './ui/Button'
 import { InstagramLink } from './ui/InstagramLink'
 
+/** Shared height for logo, Book button, and nav row alignment */
+const NAV_ACTION_HEIGHT = 'h-12'
+
 const navLinksLeft = [
   { href: '#philosophy', label: 'Studio' },
   { href: '#services', label: 'Services' },
@@ -29,10 +32,10 @@ export function Navbar() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 overflow-hidden border-b border-ink/8 bg-white shadow-sm">
       <nav
-        className="relative mx-auto flex h-16 max-w-7xl items-center px-5 sm:h-20 sm:px-8"
+        className="mx-auto grid h-20 max-w-7xl grid-cols-[1fr_auto_1fr] items-center gap-4 px-5 sm:px-8"
         aria-label="Main navigation"
       >
-        <div className="flex min-w-0 flex-1 items-center justify-start">
+        <div className={`flex ${NAV_ACTION_HEIGHT} items-center justify-start`}>
           <ul className="hidden items-center gap-6 lg:flex xl:gap-8">
             {navLinksLeft.map((link) => (
               <li key={link.href}>
@@ -49,12 +52,12 @@ export function Navbar() {
 
         <a
           href="#"
-          className="absolute left-1/2 top-1/2 z-10 flex h-full max-h-full -translate-x-1/2 -translate-y-1/2 items-center transition-opacity hover:opacity-90"
+          className={`flex ${NAV_ACTION_HEIGHT} items-center justify-center transition-opacity hover:opacity-90`}
         >
-          <Logo className="h-full max-h-full w-auto" />
+          <Logo className={`${NAV_ACTION_HEIGHT} w-auto max-h-full`} />
         </a>
 
-        <div className="flex min-w-0 flex-1 items-center justify-end gap-4">
+        <div className={`flex ${NAV_ACTION_HEIGHT} items-center justify-end gap-4`}>
           <ul className="hidden items-center gap-6 lg:flex xl:gap-8">
             {navLinksRight.map((link) => (
               <li key={link.href}>
@@ -67,16 +70,22 @@ export function Navbar() {
               </li>
             ))}
           </ul>
-          <div className="hidden items-center gap-4 lg:flex">
-            <InstagramLink iconClassName="h-5 w-5" />
-            <Button href={BOOKING_URL} className="!px-6 !py-2.5 !text-xs">
+          <div className={`hidden items-center gap-4 lg:flex ${NAV_ACTION_HEIGHT}`}>
+            <InstagramLink
+              iconClassName="h-5 w-5"
+              className={`${NAV_ACTION_HEIGHT} items-center`}
+            />
+            <Button
+              href={BOOKING_URL}
+              className={`!flex ${NAV_ACTION_HEIGHT} !min-h-0 !items-center !justify-center !px-6 !py-0 !text-xs`}
+            >
               Book
             </Button>
           </div>
 
           <button
             type="button"
-            className="flex h-11 w-11 items-center justify-center lg:hidden"
+            className={`flex ${NAV_ACTION_HEIGHT} w-11 items-center justify-center lg:hidden`}
             aria-expanded={menuOpen}
             aria-label={menuOpen ? 'Close menu' : 'Open menu'}
             onClick={() => setMenuOpen(!menuOpen)}
@@ -98,7 +107,7 @@ export function Navbar() {
       </nav>
 
       {menuOpen && (
-        <div className="fixed inset-0 top-16 z-40 bg-white sm:top-20 lg:hidden">
+        <div className="fixed inset-0 top-20 z-40 bg-white lg:hidden">
           <ul className="flex flex-col gap-1 px-6 py-8">
             {[...navLinksLeft, ...navLinksRight].map((link) => (
               <li key={link.href}>
