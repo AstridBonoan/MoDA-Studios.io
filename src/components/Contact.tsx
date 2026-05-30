@@ -1,6 +1,7 @@
-import { BOOKING_URL, INSTAGRAM_URL, LOCATION, MAP_EMBED_URL } from '../constants'
+import { BOOKING_URL, LOCATION, MAP_EMBED_URL } from '../constants'
 import { Button } from './ui/Button'
 import { FadeIn } from './ui/FadeIn'
+import { InstagramLink } from './ui/InstagramLink'
 import { SectionHeading } from './ui/SectionHeading'
 
 export function Contact() {
@@ -46,14 +47,7 @@ export function Contact() {
               <h3 className="text-xs tracking-[0.15em] uppercase text-ink">
                 Connect
               </h3>
-              <a
-                href={INSTAGRAM_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-2 inline-block text-lg text-ink transition-colors hover:text-ink"
-              >
-                @modastudiosofficial
-              </a>
+              <InstagramLink className="mt-2 inline-flex text-ink hover:text-ink-muted" iconClassName="h-7 w-7" />
             </div>
 
             <Button href={BOOKING_URL}>Book Appointment</Button>

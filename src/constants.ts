@@ -1,7 +1,9 @@
 export const BOOKING_URL =
   'https://getsquire.com/booking/book/moda-studios-garden-city'
 
-export const INSTAGRAM_URL = 'https://www.instagram.com/modastudiosofficial/'
+export const INSTAGRAM_HANDLE = 'modastudiosofficial'
+
+export const INSTAGRAM_URL = `https://www.instagram.com/${INSTAGRAM_HANDLE}/`
 
 export const SITE_NAME = 'MODA STUDIOS'
 

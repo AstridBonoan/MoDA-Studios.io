@@ -1,6 +1,7 @@
-import { BOOKING_URL, INSTAGRAM_URL, LOCATION, SITE_NAME } from '../constants'
+import { BOOKING_URL, LOCATION, SITE_NAME } from '../constants'
 import { Logo } from './Logo'
 import { Button } from './ui/Button'
+import { InstagramLink } from './ui/InstagramLink'
 
 const footerLinks = [
   { href: '#philosophy', label: 'Studio' },
@@ -44,16 +45,7 @@ export function Footer() {
             </ul>
           </nav>
 
-          <div className="text-sm">
-            <a
-              href={INSTAGRAM_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-ink-muted transition-colors hover:text-ink"
-            >
-              Instagram
-            </a>
-          </div>
+          <InstagramLink />
         </div>
 
         <div className="mt-14 flex flex-col gap-2 border-t border-ink/10 pt-8 text-xs text-ink-subtle sm:flex-row sm:justify-between">

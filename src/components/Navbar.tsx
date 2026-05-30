@@ -1,8 +1,9 @@
 import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
-import { BOOKING_URL, INSTAGRAM_URL } from '../constants'
+import { BOOKING_URL } from '../constants'
 import { Logo } from './Logo'
 import { Button } from './ui/Button'
+import { InstagramLink } from './ui/InstagramLink'
 
 const navLinks = [
   { href: '#philosophy', label: 'Studio' },
@@ -66,15 +67,7 @@ export function Navbar() {
         </ul>
 
         <div className="hidden items-center gap-4 lg:flex">
-          <a
-            href={INSTAGRAM_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-xs tracking-[0.12em] uppercase text-ink-muted transition-colors hover:text-ink"
-            aria-label="Instagram"
-          >
-            Instagram
-          </a>
+          <InstagramLink iconClassName="h-5 w-5" />
           <Button href={BOOKING_URL} className="!px-6 !py-2.5 !text-xs">
             Book
           </Button>

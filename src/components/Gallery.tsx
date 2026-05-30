@@ -1,5 +1,5 @@
-import { INSTAGRAM_URL } from '../constants'
 import { FadeIn } from './ui/FadeIn'
+import { InstagramLink } from './ui/InstagramLink'
 import { SectionHeading } from './ui/SectionHeading'
 
 const galleryItems = [
@@ -47,7 +47,7 @@ export function Gallery() {
         <SectionHeading
           label="Portfolio"
           title="The Craft, Captured"
-          subtitle="Precision fades, scissor work, and finished looks from the chair. Follow us on Instagram for the latest transformations."
+          subtitle="Precision fades, scissor work, and finished looks from the chair. Follow us for the latest transformations."
         />
 
         <div className="grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4 auto-rows-[140px] sm:auto-rows-[180px] md:auto-rows-[200px]">
@@ -68,16 +68,11 @@ export function Gallery() {
           ))}
         </div>
 
-        <FadeIn className="mt-12 text-center">
-          <a
-            href={INSTAGRAM_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex min-h-12 items-center gap-2 border-b border-ink pb-1 text-sm tracking-[0.15em] uppercase text-ink transition-colors hover:border-ink hover:text-ink-muted"
-          >
-            View on Instagram
-            <span aria-hidden>→</span>
-          </a>
+        <FadeIn className="mt-12 flex justify-center">
+          <InstagramLink
+            className="inline-flex min-h-12 min-w-12 items-center justify-center text-ink hover:text-ink-muted"
+            iconClassName="h-8 w-8"
+          />
         </FadeIn>
       </div>
     </section>
