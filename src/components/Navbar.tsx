@@ -4,10 +4,13 @@ import { Logo } from './Logo'
 import { Button } from './ui/Button'
 import { InstagramLink } from './ui/InstagramLink'
 
-const navLinks = [
+const navLinksLeft = [
   { href: '#philosophy', label: 'Studio' },
   { href: '#services', label: 'Services' },
   { href: '#gallery', label: 'Gallery' },
+]
+
+const navLinksRight = [
   { href: '#barber', label: 'Barber' },
   { href: '#faq', label: 'FAQ' },
   { href: '#contact', label: 'Contact' },
@@ -26,62 +29,78 @@ export function Navbar() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 overflow-hidden border-b border-ink/8 bg-white shadow-sm">
       <nav
-        className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 sm:h-20 sm:px-8"
+        className="relative mx-auto flex h-16 max-w-7xl items-center px-5 sm:h-20 sm:px-8"
         aria-label="Main navigation"
       >
+        <div className="flex min-w-0 flex-1 items-center justify-start">
+          <ul className="hidden items-center gap-6 lg:flex xl:gap-8">
+            {navLinksLeft.map((link) => (
+              <li key={link.href}>
+                <a
+                  href={link.href}
+                  className="text-xs font-medium tracking-[0.15em] uppercase text-ink-muted transition-colors hover:text-ink"
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
         <a
           href="#"
-          className="relative z-10 flex h-full shrink-0 items-center py-1.5 transition-opacity hover:opacity-90 sm:py-2"
+          className="absolute left-1/2 top-1/2 z-10 flex h-full max-h-full -translate-x-1/2 -translate-y-1/2 items-center transition-opacity hover:opacity-90"
         >
           <Logo className="h-full max-h-full w-auto" />
         </a>
 
-        <ul className="hidden items-center gap-8 lg:flex">
-          {navLinks.map((link) => (
-            <li key={link.href}>
-              <a
-                href={link.href}
-                className="text-xs font-medium tracking-[0.15em] uppercase text-ink-muted transition-colors hover:text-ink"
-              >
-                {link.label}
-              </a>
-            </li>
-          ))}
-        </ul>
-
-        <div className="hidden items-center gap-4 lg:flex">
-          <InstagramLink iconClassName="h-5 w-5" />
-          <Button href={BOOKING_URL} className="!px-6 !py-2.5 !text-xs">
-            Book
-          </Button>
-        </div>
-
-        <button
-          type="button"
-          className="flex h-11 w-11 items-center justify-center lg:hidden"
-          aria-expanded={menuOpen}
-          aria-label={menuOpen ? 'Close menu' : 'Open menu'}
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
-          <span className="sr-only">Menu</span>
-          <div className="flex w-6 flex-col gap-1.5">
-            <span
-              className={`block h-px bg-ink transition-transform ${menuOpen ? 'translate-y-2 rotate-45' : ''}`}
-            />
-            <span
-              className={`block h-px bg-ink transition-opacity ${menuOpen ? 'opacity-0' : ''}`}
-            />
-            <span
-              className={`block h-px bg-ink transition-transform ${menuOpen ? '-translate-y-2 -rotate-45' : ''}`}
-            />
+        <div className="flex min-w-0 flex-1 items-center justify-end gap-4">
+          <ul className="hidden items-center gap-6 lg:flex xl:gap-8">
+            {navLinksRight.map((link) => (
+              <li key={link.href}>
+                <a
+                  href={link.href}
+                  className="text-xs font-medium tracking-[0.15em] uppercase text-ink-muted transition-colors hover:text-ink"
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <div className="hidden items-center gap-4 lg:flex">
+            <InstagramLink iconClassName="h-5 w-5" />
+            <Button href={BOOKING_URL} className="!px-6 !py-2.5 !text-xs">
+              Book
+            </Button>
           </div>
-        </button>
+
+          <button
+            type="button"
+            className="flex h-11 w-11 items-center justify-center lg:hidden"
+            aria-expanded={menuOpen}
+            aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            <span className="sr-only">Menu</span>
+            <div className="flex w-6 flex-col gap-1.5">
+              <span
+                className={`block h-px bg-ink transition-transform ${menuOpen ? 'translate-y-2 rotate-45' : ''}`}
+              />
+              <span
+                className={`block h-px bg-ink transition-opacity ${menuOpen ? 'opacity-0' : ''}`}
+              />
+              <span
+                className={`block h-px bg-ink transition-transform ${menuOpen ? '-translate-y-2 -rotate-45' : ''}`}
+              />
+            </div>
+          </button>
+        </div>
       </nav>
 
       {menuOpen && (
         <div className="fixed inset-0 top-16 z-40 bg-white sm:top-20 lg:hidden">
           <ul className="flex flex-col gap-1 px-6 py-8">
-            {navLinks.map((link) => (
+            {[...navLinksLeft, ...navLinksRight].map((link) => (
               <li key={link.href}>
                 <a
                   href={link.href}
@@ -92,7 +111,8 @@ export function Navbar() {
                 </a>
               </li>
             ))}
-            <li className="mt-6 border-t border-ink/10 pt-6">
+            <li className="mt-6 flex flex-col gap-4 border-t border-ink/10 pt-6">
+              <InstagramLink iconClassName="h-6 w-6" />
               <Button href={BOOKING_URL} className="w-full">
                 Book Appointment
               </Button>
