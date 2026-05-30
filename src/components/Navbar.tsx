@@ -26,14 +26,14 @@ export function Navbar() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-ink/8 bg-white shadow-sm">
       <nav
-        className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 sm:h-24 sm:px-8"
+        className="mx-auto flex h-28 max-w-7xl items-center justify-between px-5 sm:h-32 md:h-36 sm:px-8"
         aria-label="Main navigation"
       >
         <a
           href="#"
-          className="flex shrink-0 items-center transition-opacity hover:opacity-90"
+          className="flex h-full shrink-0 items-center py-2 transition-opacity hover:opacity-90"
         >
-          <Logo className="h-14 sm:h-16" />
+          <Logo className="h-full w-auto max-h-full" />
         </a>
 
         <ul className="hidden items-center gap-8 lg:flex">
@@ -79,7 +79,7 @@ export function Navbar() {
       </nav>
 
       {menuOpen && (
-        <div className="fixed inset-0 top-20 z-40 bg-white sm:top-24 lg:hidden">
+        <div className="fixed inset-0 top-28 z-40 bg-white sm:top-32 md:top-36 lg:hidden">
           <ul className="flex flex-col gap-1 px-6 py-8">
             {navLinks.map((link) => (
               <li key={link.href}>
