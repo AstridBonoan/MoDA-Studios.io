@@ -14,7 +14,7 @@ const navLinks = [
 ]
 
 /** Logo + Book button share this height so the row stays aligned */
-const NAV_ROW_HEIGHT = 'h-12'
+const NAV_ROW_HEIGHT = 'h-16'
 
 export function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -34,9 +34,9 @@ export function Navbar() {
       >
         <a
           href="#"
-          className={`flex shrink-0 ${NAV_ROW_HEIGHT} items-center transition-opacity hover:opacity-90`}
+          className={`flex shrink-0 ${NAV_ROW_HEIGHT} items-center self-center transition-opacity hover:opacity-90`}
         >
-          <Logo className={`${NAV_ROW_HEIGHT} w-auto`} />
+          <Logo className={`${NAV_ROW_HEIGHT} w-auto max-h-full object-contain`} />
         </a>
 
         <ul className="hidden flex-1 items-center justify-center gap-6 lg:flex xl:gap-8">
