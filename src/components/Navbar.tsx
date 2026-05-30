@@ -13,8 +13,8 @@ const navLinks = [
   { href: '#contact', label: 'Contact' },
 ]
 
-/** Navbar content height in px — logo + Book button must match */
-const NAV_CONTENT_HEIGHT_PX = 80
+/** Logo height matches the Book button (min-h-12 + compact padding) */
+const LOGO_HEIGHT_PX = 48
 
 export function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -35,12 +35,8 @@ export function Navbar() {
         <a
           href="#"
           className="flex shrink-0 items-center transition-opacity hover:opacity-90"
-          style={{ height: NAV_CONTENT_HEIGHT_PX }}
         >
-          <Logo
-            heightPx={NAV_CONTENT_HEIGHT_PX}
-            className="!h-20 !max-h-20 !w-auto"
-          />
+          <Logo heightPx={LOGO_HEIGHT_PX} />
         </a>
 
         <ul className="hidden flex-1 items-center justify-center gap-6 lg:flex xl:gap-8">
@@ -63,14 +59,14 @@ export function Navbar() {
           />
           <Button
             href={BOOKING_URL}
-            className="hidden !h-20 !min-h-0 !max-h-20 !items-center !justify-center !px-6 !py-0 !text-xs !leading-none lg:inline-flex"
+            className="hidden !px-6 !py-2.5 !text-xs lg:inline-flex"
           >
             Book
           </Button>
 
           <button
             type="button"
-            className="flex h-20 w-11 items-center justify-center lg:hidden"
+            className="flex h-11 w-11 items-center justify-center lg:hidden"
             aria-expanded={menuOpen}
             aria-label={menuOpen ? 'Close menu' : 'Open menu'}
             onClick={() => setMenuOpen(!menuOpen)}
