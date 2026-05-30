@@ -34,7 +34,7 @@ export function Navbar() {
       >
         <a
           href="#"
-          className="flex shrink-0 self-start items-center pt-1 transition-opacity hover:opacity-90"
+          className="flex shrink-0 self-start items-center transition-opacity hover:opacity-90"
         >
           <Logo heightPx={LOGO_HEIGHT_PX} />
         </a>
