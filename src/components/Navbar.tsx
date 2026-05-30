@@ -13,8 +13,8 @@ const navLinks = [
   { href: '#contact', label: 'Contact' },
 ]
 
-/** Logo + Book button share this height so the row stays aligned */
-const NAV_ROW_HEIGHT = 'h-16'
+/** Navbar content height in px — logo + Book button must match */
+const NAV_CONTENT_HEIGHT_PX = 80
 
 export function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -34,9 +34,13 @@ export function Navbar() {
       >
         <a
           href="#"
-          className={`flex shrink-0 ${NAV_ROW_HEIGHT} items-center self-center transition-opacity hover:opacity-90`}
+          className="flex shrink-0 items-center transition-opacity hover:opacity-90"
+          style={{ height: NAV_CONTENT_HEIGHT_PX }}
         >
-          <Logo className={`${NAV_ROW_HEIGHT} w-auto max-h-full object-contain`} />
+          <Logo
+            heightPx={NAV_CONTENT_HEIGHT_PX}
+            className="!h-20 !max-h-20 !w-auto"
+          />
         </a>
 
         <ul className="hidden flex-1 items-center justify-center gap-6 lg:flex xl:gap-8">
@@ -52,21 +56,21 @@ export function Navbar() {
           ))}
         </ul>
 
-        <div className={`flex shrink-0 items-center gap-4 ${NAV_ROW_HEIGHT}`}>
+        <div className="flex shrink-0 items-center gap-4">
           <InstagramLink
             iconClassName="h-5 w-5"
-            className={`hidden ${NAV_ROW_HEIGHT} items-center lg:inline-flex`}
+            className="hidden items-center lg:inline-flex"
           />
           <Button
             href={BOOKING_URL}
-            className={`hidden !flex ${NAV_ROW_HEIGHT} !min-h-0 !items-center !justify-center !px-6 !py-0 !text-xs lg:inline-flex`}
+            className="hidden !h-20 !min-h-0 !max-h-20 !items-center !justify-center !px-6 !py-0 !text-xs !leading-none lg:inline-flex"
           >
             Book
           </Button>
 
           <button
             type="button"
-            className={`flex ${NAV_ROW_HEIGHT} w-11 items-center justify-center lg:hidden`}
+            className="flex h-20 w-11 items-center justify-center lg:hidden"
             aria-expanded={menuOpen}
             aria-label={menuOpen ? 'Close menu' : 'Open menu'}
             onClick={() => setMenuOpen(!menuOpen)}
