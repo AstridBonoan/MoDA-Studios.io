@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import { BOOKING_URL } from '../constants'
 import { Logo } from './Logo'
@@ -15,14 +14,7 @@ const navLinks = [
 ]
 
 export function Navbar() {
-  const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40)
-    window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
 
   useEffect(() => {
     document.body.style.overflow = menuOpen ? 'hidden' : ''
@@ -32,25 +24,16 @@ export function Navbar() {
   }, [menuOpen])
 
   return (
-    <motion.header
-      initial={{ y: -20, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.6 }}
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
-        scrolled || menuOpen
-          ? 'bg-white/95 backdrop-blur-md border-b border-ink/8 shadow-sm shadow-ink/5'
-          : 'bg-transparent'
-      }`}
-    >
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-ink/8 bg-white shadow-sm">
       <nav
-        className="mx-auto flex h-32 max-w-7xl items-center justify-between px-5 sm:h-36 sm:px-8"
+        className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 sm:h-24 sm:px-8"
         aria-label="Main navigation"
       >
         <a
           href="#"
-          className="flex h-full shrink-0 items-center bg-transparent py-1 transition-opacity hover:opacity-90"
+          className="flex shrink-0 items-center transition-opacity hover:opacity-90"
         >
-          <Logo className="h-full max-h-full w-auto min-h-0" />
+          <Logo className="h-14 sm:h-16" />
         </a>
 
         <ul className="hidden items-center gap-8 lg:flex">
@@ -96,11 +79,7 @@ export function Navbar() {
       </nav>
 
       {menuOpen && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          className="fixed inset-0 top-32 z-40 bg-white sm:top-36 lg:hidden"
-        >
+        <div className="fixed inset-0 top-20 z-40 bg-white sm:top-24 lg:hidden">
           <ul className="flex flex-col gap-1 px-6 py-8">
             {navLinks.map((link) => (
               <li key={link.href}>
@@ -119,8 +98,8 @@ export function Navbar() {
               </Button>
             </li>
           </ul>
-        </motion.div>
+        </div>
       )}
-    </motion.header>
+    </header>
   )
 }

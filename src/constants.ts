@@ -9,7 +9,7 @@ export const SITE_NAME = 'MODA STUDIOS'
 
 const asset = (path: string) => `${import.meta.env.BASE_URL}${path}`
 
-export const HERO_IMAGE = asset('hero-scissors.jpg')
+export const HERO_IMAGE = asset('hero-scissors.jpg?v=4')
 
 export const GALLERY_ITEMS = [
   {
