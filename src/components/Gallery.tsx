@@ -1,44 +1,7 @@
+import { GALLERY_ITEMS } from '../constants'
 import { FadeIn } from './ui/FadeIn'
 import { InstagramLink } from './ui/InstagramLink'
 import { SectionHeading } from './ui/SectionHeading'
-
-const galleryItems = [
-  {
-    src: 'https://images.unsplash.com/photo-1622286342621-4bd786c24475?auto=format&fit=crop&w=600&q=80',
-    alt: 'Precision fade and line work',
-    span: 'md:col-span-2 md:row-span-2',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=600&q=80',
-    alt: 'Modern textured hairstyle',
-    span: '',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1620331314712-92fdd703f4ee?auto=format&fit=crop&w=600&q=80',
-    alt: 'Scissor work detail',
-    span: '',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=600&q=80',
-    alt: 'Finished cut styling',
-    span: 'md:col-span-2',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1585747860715-2a37fcefcad8?auto=format&fit=crop&w=600&q=80',
-    alt: 'Studio environment',
-    span: '',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=600&q=80',
-    alt: 'Beard grooming detail',
-    span: '',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1593702275687-f2b03847553d?auto=format&fit=crop&w=600&q=80',
-    alt: 'Before and after transformation',
-    span: 'md:col-span-2',
-  },
-]
 
 export function Gallery() {
   return (
@@ -51,11 +14,11 @@ export function Gallery() {
         />
 
         <div className="grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4 auto-rows-[140px] sm:auto-rows-[180px] md:auto-rows-[200px]">
-          {galleryItems.map((item, i) => (
+          {GALLERY_ITEMS.map((item, i) => (
             <FadeIn
-              key={item.src}
+              key={item.id}
               delay={i * 0.05}
-              className={`group relative overflow-hidden ${item.span}`}
+              className={`group relative overflow-hidden bg-ink/5 ${item.span}`}
             >
               <img
                 src={item.src}

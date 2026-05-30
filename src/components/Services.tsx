@@ -1,4 +1,4 @@
-import { BOOKING_URL } from '../constants'
+import { BOOKING_URL, SERVICE_IMAGES } from '../constants'
 import { Button } from './ui/Button'
 import { FadeIn } from './ui/FadeIn'
 import { SectionHeading } from './ui/SectionHeading'
@@ -16,40 +16,35 @@ const services = [
       'Beard detailing',
       'Styling finish',
     ],
-    image:
-      'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=80',
+    image: SERVICE_IMAGES.moda,
   },
   {
     name: 'Haircut + Beard',
     description:
       'Complete grooming with coordinated haircut and beard sculpting for a polished, unified look.',
     includes: ['Haircut', 'Beard trim & shape', 'Hot towel finish'],
-    image:
-      'https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=800&q=80',
+    image: SERVICE_IMAGES.haircutBeard,
   },
   {
     name: 'Precision Fade',
     description:
       'Clean, seamless fades with sharp transitions and meticulous blending for a modern silhouette.',
     includes: ['Consultation', 'Fade execution', 'Line-up', 'Styling'],
-    image:
-      'https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=800&q=80',
+    image: SERVICE_IMAGES.fade,
   },
   {
     name: 'Texture & Styling',
     description:
       'Cuts designed to enhance natural texture with product recommendations tailored to your hair type.',
     includes: ['Texture cut', 'Styling education', 'Product finish'],
-    image:
-      'https://images.unsplash.com/photo-1620331314712-92fdd703f4ee?auto=format&fit=crop&w=800&q=80',
+    image: SERVICE_IMAGES.texture,
   },
   {
     name: 'Grooming Services',
     description:
       'Beard maintenance, line-ups, and detailed grooming for clients who demand consistency between cuts.',
     includes: ['Beard trim', 'Line-up', 'Skin prep'],
-    image:
-      'https://images.unsplash.com/photo-1593702275687-f2b03847553d?auto=format&fit=crop&w=800&q=80',
+    image: SERVICE_IMAGES.grooming,
   },
 ]
 

@@ -1,10 +1,7 @@
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { useRef } from 'react'
-import { BOOKING_URL } from '../constants'
+import { BOOKING_URL, HERO_IMAGE } from '../constants'
 import { Button } from './ui/Button'
-
-const HERO_IMAGE =
-  'https://images.unsplash.com/photo-1622286342621-4bd786c24475?auto=format&fit=crop&w=1920&q=80'
 
 export function Hero() {
   const ref = useRef<HTMLElement>(null)

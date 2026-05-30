@@ -7,6 +7,63 @@ export const INSTAGRAM_URL = `https://www.instagram.com/${INSTAGRAM_HANDLE}/`
 
 export const SITE_NAME = 'MODA STUDIOS'
 
+const asset = (path: string) => `${import.meta.env.BASE_URL}${path}`
+
+export const HERO_IMAGE = asset('studio.png')
+
+export const GALLERY_ITEMS = [
+  {
+    id: 'studio',
+    src: asset('studio.png'),
+    alt: 'MODA STUDIOS interior',
+    span: 'md:col-span-2 md:row-span-2',
+  },
+  {
+    id: 'shawn',
+    src: asset('barbers/shawn-b.png'),
+    alt: 'Shawn B — precision barbering',
+    span: '',
+  },
+  {
+    id: 'patrick',
+    src: asset('barbers/patrick-g.png'),
+    alt: 'Patrick G — grooming specialist',
+    span: '',
+  },
+  {
+    id: 'haircut',
+    src: asset('gallery/haircut.jpg'),
+    alt: 'Precision fade and line work',
+    span: '',
+  },
+  {
+    id: 'scissor',
+    src: asset('gallery/scissor.jpg'),
+    alt: 'Scissor work and texture',
+    span: 'md:col-span-2',
+  },
+  {
+    id: 'beard',
+    src: asset('gallery/beard.jpg'),
+    alt: 'Beard grooming detail',
+    span: '',
+  },
+  {
+    id: 'styling',
+    src: asset('gallery/styling.jpg'),
+    alt: 'Finished cut and styling',
+    span: '',
+  },
+] as const
+
+export const SERVICE_IMAGES = {
+  moda: asset('studio.png'),
+  haircutBeard: asset('barbers/shawn-b.png'),
+  fade: asset('gallery/haircut.jpg'),
+  texture: asset('gallery/scissor.jpg'),
+  grooming: asset('barbers/patrick-g.png'),
+} as const
+
 export const LOCATION = {
   name: 'MoDA Studios',
   area: 'Garden City, NY',
