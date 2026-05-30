@@ -14,7 +14,7 @@ const navLinks = [
 ]
 
 /** Logo height — inline px so global img { height: auto } does not shrink it */
-const LOGO_HEIGHT_PX = 72
+const LOGO_HEIGHT_PX = 80
 
 export function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
