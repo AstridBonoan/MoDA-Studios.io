@@ -5,9 +5,9 @@
   --font-accent: 'Cormorant Garamond', Georgia, serif;
   --font-body: 'Inter', system-ui, sans-serif;
 
-  /* Light, bright studio palette */
-  --color-surface: #f7f5f1;
-  --color-surface-muted: #efede8;
+  /* Pure white luxury palette */
+  --color-surface: #ffffff;
+  --color-surface-muted: #ffffff;
   --color-surface-card: #ffffff;
   --color-ink: #1a1a1a;
   --color-ink-muted: #5c5752;
@@ -16,10 +16,10 @@
   --color-brass: #a68b5b;
   --color-cream: #d4c9b0;
 
-  /* Tailwind class aliases used across components */
-  --color-matte: #f7f5f1;
-  --color-charcoal: #efede8;
-  --color-charcoal-light: #e5e1da;
+  /* Legacy aliases */
+  --color-matte: #ffffff;
+  --color-charcoal: #ffffff;
+  --color-charcoal-light: #f5f5f5;
   --color-off-white: #1a1a1a;
   --color-beige: #5c5752;
   --color-warm-gray: #8a847c;
@@ -30,7 +30,7 @@ html {
 }
 
 body {
-  @apply bg-surface text-ink font-body antialiased;
+  @apply bg-white text-ink font-body antialiased;
   margin: 0;
   min-height: 100vh;
 }

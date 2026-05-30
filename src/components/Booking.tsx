@@ -24,7 +24,7 @@ export function Booking() {
   return (
     <section
       id="booking"
-      className="relative overflow-hidden bg-surface-muted py-24 sm:py-32"
+      className="relative overflow-hidden bg-white py-24 sm:py-32"
     >
       <div
         className="absolute inset-0 opacity-20"

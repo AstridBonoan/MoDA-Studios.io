@@ -55,7 +55,7 @@ const services = [
 
 export function Services() {
   return (
-    <section id="services" className="bg-surface py-24 sm:py-32">
+    <section id="services" className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
           label="Services"
@@ -68,7 +68,7 @@ export function Services() {
             <FadeIn
               key={service.name}
               delay={i * 0.08}
-              className={`group relative overflow-hidden border border-ink/10 bg-surface-card shadow-sm transition-colors hover:border-gold/40 hover:shadow-md ${
+              className={`group relative overflow-hidden border border-ink/10 bg-white shadow-sm transition-colors hover:border-gold/40 hover:shadow-md ${
                 service.featured ? 'md:col-span-2 lg:grid lg:grid-cols-2' : ''
               }`}
             >

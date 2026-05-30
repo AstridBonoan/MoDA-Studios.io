@@ -24,7 +24,7 @@ const STUDIO_IMAGE =
 
 export function Philosophy() {
   return (
-    <section id="philosophy" className="bg-surface-muted py-24 sm:py-32">
+    <section id="philosophy" className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
           <FadeIn className="relative aspect-[4/5] overflow-hidden lg:aspect-auto lg:min-h-[640px]">
@@ -34,7 +34,7 @@ export function Philosophy() {
               className="absolute inset-0 h-full w-full object-cover"
               loading="lazy"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-surface/30 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-white/40 to-transparent" />
           </FadeIn>
 
           <div>

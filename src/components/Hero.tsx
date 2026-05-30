@@ -32,7 +32,7 @@ export function Hero() {
 
       <motion.div
         style={{ opacity: overlayOpacity }}
-        className="absolute inset-0 bg-gradient-to-t from-surface via-surface/85 to-white/20"
+        className="absolute inset-0 bg-gradient-to-t from-white via-white/90 to-white/30"
         aria-hidden
       />
 

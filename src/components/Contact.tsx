@@ -5,7 +5,7 @@ import { SectionHeading } from './ui/SectionHeading'
 
 export function Contact() {
   return (
-    <section id="contact" className="bg-surface py-24 sm:py-32">
+    <section id="contact" className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
           label="Visit"
@@ -61,7 +61,7 @@ export function Contact() {
 
           <FadeIn
             delay={0.15}
-            className="relative min-h-[320px] overflow-hidden border border-ink/10 bg-surface-card shadow-sm lg:min-h-[420px]"
+            className="relative min-h-[320px] overflow-hidden border border-ink/10 bg-white shadow-sm lg:min-h-[420px]"
           >
             <iframe
               title="MODA STUDIOS location map — Garden City, NY"

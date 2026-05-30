@@ -6,7 +6,7 @@ type LogoProps = {
   className?: string
 }
 
-/** Full vertical logo — original black on transparent */
+/** Black logo mark — transparent PNG, no background box */
 export function Logo({ className = '' }: LogoProps) {
   return (
     <img

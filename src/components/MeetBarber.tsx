@@ -7,7 +7,7 @@ const PORTRAIT =
 
 export function MeetBarber() {
   return (
-    <section id="barber" className="bg-surface py-24 sm:py-32">
+    <section id="barber" className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
           <FadeIn className="lg:col-span-5">
@@ -58,7 +58,7 @@ export function MeetBarber() {
               ].map((stat) => (
                 <div
                   key={stat.label}
-                  className="border border-ink/10 bg-surface-card px-5 py-4 shadow-sm"
+                  className="border border-ink/10 bg-white px-5 py-4 shadow-sm"
                 >
                   <p className="text-xs tracking-[0.15em] uppercase text-gold">
                     {stat.label}

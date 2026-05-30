@@ -38,7 +38,7 @@ export function Navbar() {
       transition={{ duration: 0.6 }}
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
         scrolled || menuOpen
-          ? 'bg-surface/95 backdrop-blur-md border-b border-ink/8 shadow-sm shadow-ink/5'
+          ? 'bg-white/95 backdrop-blur-md border-b border-ink/8 shadow-sm shadow-ink/5'
           : 'bg-transparent'
       }`}
     >
@@ -48,7 +48,7 @@ export function Navbar() {
       >
         <a
           href="#"
-          className="flex shrink-0 items-center overflow-visible transition-opacity hover:opacity-90"
+          className="flex shrink-0 items-center bg-transparent transition-opacity hover:opacity-90"
         >
           <Logo className="max-h-[5.5rem] sm:max-h-24 md:max-h-28 lg:max-h-32" />
         </a>
@@ -107,7 +107,7 @@ export function Navbar() {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          className="fixed inset-0 top-[5.75rem] z-40 bg-surface sm:top-24 lg:hidden"
+          className="fixed inset-0 top-[5.75rem] z-40 bg-white sm:top-24 lg:hidden"
         >
           <ul className="flex flex-col gap-1 px-6 py-8">
             {navLinks.map((link) => (
