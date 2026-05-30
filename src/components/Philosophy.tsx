@@ -26,14 +26,16 @@ export function Philosophy() {
     <section id="philosophy" className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
-          <FadeIn className="relative aspect-[4/5] overflow-hidden lg:aspect-auto lg:min-h-[640px]">
+          <FadeIn className="relative mx-auto w-full max-w-md overflow-hidden lg:mx-0 lg:max-w-none">
             <img
               src={STUDIO_IMAGE}
               alt="MODA STUDIOS interior — modern barber chairs and studio environment"
-              className="absolute inset-0 h-full w-full object-cover object-center"
+              width={804}
+              height={1004}
+              className="h-auto w-full max-w-full object-contain object-center"
+              decoding="async"
               loading="lazy"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-white/40 to-transparent" />
           </FadeIn>
 
           <div>
