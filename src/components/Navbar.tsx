@@ -33,7 +33,7 @@ export function Navbar() {
           href="#"
           className="relative z-10 flex shrink-0 items-center transition-opacity hover:opacity-90"
         >
-          <Logo className="h-16 w-auto sm:h-20" />
+          <Logo className="h-24 w-auto sm:h-32 md:h-36" />
         </a>
 
         <ul className="hidden items-center gap-8 lg:flex">
