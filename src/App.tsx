@@ -7,7 +7,6 @@ import { Hero } from './components/Hero'
 import { MeetBarber } from './components/MeetBarber'
 import { Navbar } from './components/Navbar'
 import { Philosophy } from './components/Philosophy'
-import { Reviews } from './components/Reviews'
 import { Services } from './components/Services'
 
 function App() {
@@ -27,7 +26,6 @@ function App() {
         <Gallery />
         <MeetBarber />
         <Booking />
-        <Reviews />
         <FAQ />
         <Contact />
       </main>
