@@ -43,14 +43,14 @@ export function Navbar() {
       }`}
     >
       <nav
-        className="mx-auto flex max-w-7xl items-center justify-between px-5 py-2 sm:px-8"
+        className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 sm:h-[4.5rem] sm:px-8"
         aria-label="Main navigation"
       >
         <a
           href="#"
-          className="flex shrink-0 items-center bg-transparent transition-opacity hover:opacity-90"
+          className="flex h-full shrink-0 items-center bg-transparent transition-opacity hover:opacity-90"
         >
-          <Logo className="max-h-12 sm:max-h-14 md:max-h-16" />
+          <Logo className="h-full w-auto" />
         </a>
 
         <ul className="hidden items-center gap-8 lg:flex">
@@ -107,7 +107,7 @@ export function Navbar() {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          className="fixed inset-0 top-16 z-40 bg-white sm:top-[4.25rem] lg:hidden"
+          className="fixed inset-0 top-16 z-40 bg-white sm:top-[4.5rem] lg:hidden"
         >
           <ul className="flex flex-col gap-1 px-6 py-8">
             {navLinks.map((link) => (
