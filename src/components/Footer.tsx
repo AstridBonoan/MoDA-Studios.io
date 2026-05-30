@@ -1,4 +1,5 @@
 import { BOOKING_URL, INSTAGRAM_URL, LOCATION, SITE_NAME } from '../constants'
+import { Logo } from './Logo'
 import { Button } from './ui/Button'
 
 const footerLinks = [
@@ -19,9 +20,7 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <div className="flex flex-col gap-12 lg:flex-row lg:items-start lg:justify-between">
           <div>
-            <p className="font-display text-xl tracking-[0.2em] text-off-white">
-              {SITE_NAME}
-            </p>
+            <Logo size="md" />
             <p className="mt-2 text-sm text-warm-gray">{LOCATION.area}</p>
             <div className="mt-6">
               <Button href={BOOKING_URL} className="!text-xs">

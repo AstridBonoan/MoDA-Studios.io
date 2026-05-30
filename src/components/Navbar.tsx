@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
-import { BOOKING_URL, INSTAGRAM_URL, SITE_NAME } from '../constants'
+import { BOOKING_URL, INSTAGRAM_URL } from '../constants'
+import { Logo } from './Logo'
 import { Button } from './ui/Button'
 
 const navLinks = [
@@ -45,11 +46,8 @@ export function Navbar() {
         className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8"
         aria-label="Main navigation"
       >
-        <a
-          href="#"
-          className="font-display text-lg tracking-[0.25em] text-off-white sm:text-xl"
-        >
-          {SITE_NAME}
+        <a href="#" className="block shrink-0 transition-opacity hover:opacity-80">
+          <Logo size="sm" className="sm:h-12" />
         </a>
 
         <ul className="hidden items-center gap-8 lg:flex">
