@@ -58,7 +58,7 @@ export function Navbar() {
             <li key={link.href}>
               <a
                 href={link.href}
-                className="text-xs font-medium tracking-[0.15em] uppercase text-ink-muted transition-colors hover:text-gold"
+                className="text-xs font-medium tracking-[0.15em] uppercase text-ink-muted transition-colors hover:text-ink"
               >
                 {link.label}
               </a>
@@ -71,7 +71,7 @@ export function Navbar() {
             href={INSTAGRAM_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xs tracking-[0.12em] uppercase text-ink-muted transition-colors hover:text-gold"
+            className="text-xs tracking-[0.12em] uppercase text-ink-muted transition-colors hover:text-ink"
             aria-label="Instagram"
           >
             Instagram
@@ -115,7 +115,7 @@ export function Navbar() {
                 <a
                   href={link.href}
                   onClick={() => setMenuOpen(false)}
-                  className="block min-h-12 py-3 font-display text-2xl text-ink transition-colors hover:text-gold"
+                  className="block min-h-12 py-3 font-display text-2xl text-ink transition-colors hover:text-ink"
                 >
                   {link.label}
                 </a>

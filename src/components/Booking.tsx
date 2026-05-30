@@ -26,18 +26,9 @@ export function Booking() {
       id="booking"
       className="relative overflow-hidden bg-white py-24 sm:py-32"
     >
-      <div
-        className="absolute inset-0 opacity-20"
-        style={{
-          backgroundImage:
-            'radial-gradient(ellipse at 30% 50%, rgba(184,160,102,0.15), transparent 60%)',
-        }}
-        aria-hidden
-      />
-
       <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
         <FadeIn className="mx-auto max-w-3xl text-center">
-          <p className="font-accent text-lg italic tracking-[0.2em] text-gold uppercase">
+          <p className="font-accent text-lg italic tracking-[0.2em] text-ink uppercase">
             Appointments
           </p>
           <h2 className="mt-3 font-display text-4xl text-ink sm:text-5xl md:text-6xl">
@@ -53,8 +44,8 @@ export function Booking() {
         <div className="mt-16 grid gap-8 md:grid-cols-3">
           {steps.map((item, i) => (
             <FadeIn key={item.step} delay={i * 0.12}>
-              <div className="border-t border-gold/40 pt-8 text-center md:text-left">
-                <span className="font-display text-3xl text-gold/60">
+              <div className="border-t border-ink/40 pt-8 text-center md:text-left">
+                <span className="font-display text-3xl text-ink/60">
                   {item.step}
                 </span>
                 <h3 className="mt-4 font-display text-xl text-ink">

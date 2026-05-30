@@ -41,7 +41,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.7 }}
-          className="mb-4 font-accent text-xl italic tracking-wide text-gold sm:text-2xl"
+          className="mb-4 font-accent text-xl italic tracking-wide text-ink sm:text-2xl"
         >
           Garden City · Appointment Only
         </motion.p>
@@ -87,7 +87,7 @@ export function Hero() {
         className="absolute bottom-8 left-1/2 z-10 hidden -translate-x-1/2 sm:block"
         aria-hidden
       >
-        <div className="h-12 w-px bg-gradient-to-b from-gold/0 via-gold/60 to-gold/0" />
+        <div className="h-12 w-px bg-gradient-to-b from-transparent via-ink/30 to-transparent" />
       </motion.div>
     </section>
   )

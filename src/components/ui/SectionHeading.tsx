@@ -18,7 +18,7 @@ export function SectionHeading({
   return (
     <FadeIn className={`mb-14 max-w-3xl ${alignClass}`}>
       {label && (
-        <p className="mb-3 font-accent text-lg tracking-[0.2em] uppercase italic text-gold">
+        <p className="mb-3 font-accent text-lg tracking-[0.2em] uppercase italic text-ink">
           {label}
         </p>
       )}

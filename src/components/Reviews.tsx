@@ -55,9 +55,9 @@ export function Reviews() {
             <FadeIn
               key={review.author}
               delay={i * 0.06}
-              className="flex flex-col border border-ink/10 bg-white p-8 shadow-sm transition-colors hover:border-gold/35 hover:shadow-md"
+              className="flex flex-col border border-ink/10 bg-white p-8 shadow-sm transition-colors hover:border-ink/35 hover:shadow-md"
             >
-              <p className="text-xs tracking-[0.15em] uppercase text-gold">
+              <p className="text-xs tracking-[0.15em] uppercase text-ink">
                 {review.theme}
               </p>
               <blockquote className="mt-5 flex-1 font-accent text-xl leading-relaxed text-ink-muted italic">

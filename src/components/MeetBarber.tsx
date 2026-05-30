@@ -24,7 +24,7 @@ export function MeetBarber() {
 
           <div className="lg:col-span-7">
             <FadeIn>
-              <p className="font-accent text-lg italic tracking-[0.2em] text-gold uppercase">
+              <p className="font-accent text-lg italic tracking-[0.2em] text-ink uppercase">
                 Meet Your Barber
               </p>
               <h2 className="mt-3 font-display text-4xl leading-tight text-ink sm:text-5xl md:text-6xl">
@@ -60,7 +60,7 @@ export function MeetBarber() {
                   key={stat.label}
                   className="border border-ink/10 bg-white px-5 py-4 shadow-sm"
                 >
-                  <p className="text-xs tracking-[0.15em] uppercase text-gold">
+                  <p className="text-xs tracking-[0.15em] uppercase text-ink">
                     {stat.label}
                   </p>
                   <p className="mt-1 font-display text-lg text-ink">

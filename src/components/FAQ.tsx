@@ -54,7 +54,7 @@ function FAQItem({
           {question}
         </span>
         <span
-          className={`flex h-8 w-8 shrink-0 items-center justify-center text-gold transition-transform duration-300 ${isOpen ? 'rotate-45' : ''}`}
+          className={`flex h-8 w-8 shrink-0 items-center justify-center text-ink transition-transform duration-300 ${isOpen ? 'rotate-45' : ''}`}
           aria-hidden
         >
           +

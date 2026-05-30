@@ -35,7 +35,7 @@ export function Footer() {
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="text-sm text-ink-muted transition-colors hover:text-gold"
+                    className="text-sm text-ink-muted transition-colors hover:text-ink"
                   >
                     {link.label}
                   </a>
@@ -49,7 +49,7 @@ export function Footer() {
               href={INSTAGRAM_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-ink-muted transition-colors hover:text-gold"
+              className="text-ink-muted transition-colors hover:text-ink"
             >
               Instagram
             </a>

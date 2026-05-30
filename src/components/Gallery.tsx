@@ -73,7 +73,7 @@ export function Gallery() {
             href={INSTAGRAM_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex min-h-12 items-center gap-2 border-b border-gold/50 pb-1 text-sm tracking-[0.15em] uppercase text-gold transition-colors hover:border-gold hover:text-cream"
+            className="inline-flex min-h-12 items-center gap-2 border-b border-ink pb-1 text-sm tracking-[0.15em] uppercase text-ink transition-colors hover:border-ink hover:text-ink-muted"
           >
             View on Instagram
             <span aria-hidden>→</span>

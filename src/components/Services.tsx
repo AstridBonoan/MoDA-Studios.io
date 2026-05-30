@@ -68,7 +68,7 @@ export function Services() {
             <FadeIn
               key={service.name}
               delay={i * 0.08}
-              className={`group relative overflow-hidden border border-ink/10 bg-white shadow-sm transition-colors hover:border-gold/40 hover:shadow-md ${
+              className={`group relative overflow-hidden border border-ink/10 bg-white shadow-sm transition-colors hover:border-ink/40 hover:shadow-md ${
                 service.featured ? 'md:col-span-2 lg:grid lg:grid-cols-2' : ''
               }`}
             >
@@ -83,7 +83,7 @@ export function Services() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-ink/50 via-ink/10 to-transparent" />
                 {service.featured && (
-                  <span className="absolute left-4 top-4 bg-gold px-3 py-1 text-xs font-medium tracking-[0.15em] uppercase text-ink">
+                  <span className="absolute left-4 top-4 bg-ink px-3 py-1 text-xs font-medium tracking-[0.15em] uppercase text-white">
                     Signature
                   </span>
                 )}
@@ -102,7 +102,7 @@ export function Services() {
                       key={item}
                       className="flex items-center gap-2 text-sm text-ink-subtle"
                     >
-                      <span className="h-px w-4 bg-gold/60" aria-hidden />
+                      <span className="h-px w-4 bg-ink/60" aria-hidden />
                       {item}
                     </li>
                   ))}

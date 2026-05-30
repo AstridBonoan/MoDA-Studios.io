@@ -5,16 +5,18 @@
   --font-accent: 'Cormorant Garamond', Georgia, serif;
   --font-body: 'Inter', system-ui, sans-serif;
 
-  /* Pure white luxury palette */
+  /* Black & white only */
   --color-surface: #ffffff;
   --color-surface-muted: #ffffff;
   --color-surface-card: #ffffff;
   --color-ink: #1a1a1a;
   --color-ink-muted: #5c5752;
   --color-ink-subtle: #8a847c;
-  --color-gold: #b8a066;
-  --color-brass: #a68b5b;
-  --color-cream: #d4c9b0;
+
+  /* Accent tokens mapped to monochrome (replaces gold) */
+  --color-gold: #1a1a1a;
+  --color-brass: #000000;
+  --color-cream: #5c5752;
 
   /* Legacy aliases */
   --color-matte: #ffffff;
@@ -36,6 +38,6 @@ body {
 }
 
 ::selection {
-  background-color: color-mix(in srgb, var(--color-gold) 35%, transparent);
+  background-color: color-mix(in srgb, var(--color-ink) 15%, transparent);
   color: var(--color-ink);
 }

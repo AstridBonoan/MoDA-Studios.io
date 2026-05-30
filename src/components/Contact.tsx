@@ -16,7 +16,7 @@ export function Contact() {
         <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
           <FadeIn className="space-y-8">
             <div>
-              <h3 className="text-xs tracking-[0.15em] uppercase text-gold">
+              <h3 className="text-xs tracking-[0.15em] uppercase text-ink">
                 Location
               </h3>
               <p className="mt-2 font-display text-2xl text-ink">
@@ -26,7 +26,7 @@ export function Contact() {
             </div>
 
             <div>
-              <h3 className="text-xs tracking-[0.15em] uppercase text-gold">
+              <h3 className="text-xs tracking-[0.15em] uppercase text-ink">
                 Hours
               </h3>
               <ul className="mt-3 space-y-2">
@@ -43,14 +43,14 @@ export function Contact() {
             </div>
 
             <div>
-              <h3 className="text-xs tracking-[0.15em] uppercase text-gold">
+              <h3 className="text-xs tracking-[0.15em] uppercase text-ink">
                 Connect
               </h3>
               <a
                 href={INSTAGRAM_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-2 inline-block text-lg text-ink transition-colors hover:text-gold"
+                className="mt-2 inline-block text-lg text-ink transition-colors hover:text-ink"
               >
                 @modastudiosofficial
               </a>

@@ -39,7 +39,7 @@ export function Philosophy() {
 
           <div>
             <FadeIn>
-              <p className="font-accent text-lg italic tracking-[0.2em] text-gold uppercase">
+              <p className="font-accent text-lg italic tracking-[0.2em] text-ink uppercase">
                 The Studio
               </p>
               <h2 className="mt-3 font-display text-4xl leading-tight text-ink sm:text-5xl">
@@ -58,7 +58,7 @@ export function Philosophy() {
             <div className="mt-12 space-y-8">
               {points.map((point, i) => (
                 <FadeIn key={point.title} delay={i * 0.1}>
-                  <div className="border-l border-gold/40 pl-6">
+                  <div className="border-l border-ink/40 pl-6">
                     <h3 className="font-display text-xl text-ink">
                       {point.title}
                     </h3>
