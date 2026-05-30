@@ -20,7 +20,7 @@ export function Hero() {
         aria-hidden
       />
 
-      <div className="relative z-10 mx-auto w-full max-w-7xl px-5 pb-20 pt-32 sm:px-8 sm:pb-28 sm:pt-36 md:pt-40 md:pb-32">
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-5 pb-20 pt-28 sm:px-8 sm:pb-28 sm:pt-32 md:pb-32">
         <p className="mb-4 font-accent text-xl italic tracking-wide text-ink sm:text-2xl">
           Garden City · Appointment Only
         </p>
