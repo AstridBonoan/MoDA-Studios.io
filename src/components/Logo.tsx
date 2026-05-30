@@ -12,7 +12,7 @@ export function Logo({ className = '' }: LogoProps) {
     <img
       src={logoSrc}
       alt={SITE_NAME}
-      className={`block h-auto w-auto max-w-none object-contain ${className}`}
+      className={`block max-w-none object-contain object-left ${className}`}
       style={{ aspectRatio: '346 / 466' }}
     />
   )
