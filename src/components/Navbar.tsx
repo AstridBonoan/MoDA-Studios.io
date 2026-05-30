@@ -24,16 +24,16 @@ export function Navbar() {
   }, [menuOpen])
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 overflow-visible border-b border-ink/8 bg-white shadow-sm">
+    <header className="fixed inset-x-0 top-0 z-50 overflow-hidden border-b border-ink/8 bg-white shadow-sm">
       <nav
         className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 sm:h-20 sm:px-8"
         aria-label="Main navigation"
       >
         <a
           href="#"
-          className="relative z-10 flex shrink-0 items-center transition-opacity hover:opacity-90"
+          className="relative z-10 flex h-full shrink-0 items-center py-1.5 transition-opacity hover:opacity-90 sm:py-2"
         >
-          <Logo className="h-24 w-auto sm:h-32 md:h-36" />
+          <Logo className="h-full max-h-full w-auto" />
         </a>
 
         <ul className="hidden items-center gap-8 lg:flex">
