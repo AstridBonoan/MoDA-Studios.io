@@ -30,9 +30,10 @@ export function Philosophy() {
             <img
               src={STUDIO_IMAGE}
               alt="MODA STUDIOS barbershop interior with professional styling chairs"
-              width={804}
-              height={1004}
-              className="h-auto w-full object-cover object-center"
+              width={644}
+              height={814}
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              className="h-auto w-full"
               decoding="async"
               loading="lazy"
             />
