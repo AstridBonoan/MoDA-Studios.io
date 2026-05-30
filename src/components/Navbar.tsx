@@ -14,7 +14,7 @@ const navLinks = [
 ]
 
 /** Logo height — inline px so global img { height: auto } does not shrink it */
-const LOGO_HEIGHT_PX = 80
+const LOGO_HEIGHT_PX = 88
 /** Vertical center of logo (px from top of header) — aligns with nav link row */
 const LOGO_CENTER_Y_PX = 36
 
@@ -31,7 +31,7 @@ export function Navbar() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 overflow-hidden border-b border-ink/8 bg-white shadow-sm">
       <nav
-        className="relative mx-auto flex h-24 max-w-7xl items-center justify-between gap-6 px-5 sm:px-8"
+        className="relative mx-auto flex h-26 max-w-7xl items-center justify-between gap-6 px-5 sm:px-8"
         aria-label="Main navigation"
       >
         <div className="w-[5.5rem] shrink-0 sm:w-24" aria-hidden />
@@ -93,7 +93,7 @@ export function Navbar() {
       </nav>
 
       {menuOpen && (
-        <div className="fixed inset-0 top-24 z-40 bg-white lg:hidden">
+        <div className="fixed inset-0 top-26 z-40 bg-white lg:hidden">
           <ul className="flex flex-col gap-1 px-6 py-8">
             {navLinks.map((link) => (
               <li key={link.href}>

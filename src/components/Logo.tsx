@@ -1,6 +1,6 @@
 import { SITE_NAME } from '../constants'
 
-const logoSrc = `${import.meta.env.BASE_URL}logo.png?v=6`
+const logoSrc = `${import.meta.env.BASE_URL}logo.png?v=7`
 
 type LogoProps = {
   className?: string
