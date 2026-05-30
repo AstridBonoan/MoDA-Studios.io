@@ -46,8 +46,11 @@ export function Navbar() {
         className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8"
         aria-label="Main navigation"
       >
-        <a href="#" className="block shrink-0 transition-opacity hover:opacity-80">
-          <Logo size="sm" className="sm:h-12" />
+        <a
+          href="#"
+          className="flex shrink-0 items-center overflow-visible transition-opacity hover:opacity-90"
+        >
+          <Logo className="max-h-14 sm:max-h-16 md:max-h-[4.5rem]" />
         </a>
 
         <ul className="hidden items-center gap-8 lg:flex">
