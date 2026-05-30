@@ -20,7 +20,7 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <div className="flex flex-col gap-12 lg:flex-row lg:items-start lg:justify-between">
           <div>
-            <Logo className="max-h-40 sm:max-h-44 md:max-h-48" />
+            <Logo className="max-h-56 sm:max-h-60 md:max-h-64" />
             <p className="mt-4 text-sm text-ink-subtle">{LOCATION.area}</p>
             <div className="mt-6">
               <Button href={BOOKING_URL} className="!text-xs">

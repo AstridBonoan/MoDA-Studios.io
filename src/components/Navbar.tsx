@@ -50,7 +50,7 @@ export function Navbar() {
           href="#"
           className="flex shrink-0 items-center bg-transparent transition-opacity hover:opacity-90"
         >
-          <Logo className="max-h-[5.5rem] sm:max-h-24 md:max-h-28 lg:max-h-32" />
+          <Logo className="max-h-40 sm:max-h-44 md:max-h-48 lg:max-h-52" />
         </a>
 
         <ul className="hidden items-center gap-8 lg:flex">
