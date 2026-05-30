@@ -19,8 +19,7 @@ const points = [
   },
 ]
 
-const STUDIO_IMAGE =
-  'https://images.unsplash.com/photo-1585747860715-2a37fcefcad8?auto=format&fit=crop&w=900&q=80'
+const STUDIO_IMAGE = `${import.meta.env.BASE_URL}studio.png`
 
 export function Philosophy() {
   return (
@@ -30,8 +29,8 @@ export function Philosophy() {
           <FadeIn className="relative aspect-[4/5] overflow-hidden lg:aspect-auto lg:min-h-[640px]">
             <img
               src={STUDIO_IMAGE}
-              alt="MODA STUDIOS grooming environment"
-              className="absolute inset-0 h-full w-full object-cover"
+              alt="MODA STUDIOS interior — modern barber chairs and studio environment"
+              className="absolute inset-0 h-full w-full object-cover object-center"
               loading="lazy"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-white/40 to-transparent" />
