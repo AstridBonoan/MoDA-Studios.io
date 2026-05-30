@@ -13,8 +13,8 @@ const navLinks = [
   { href: '#contact', label: 'Contact' },
 ]
 
-/** Logo height matches the Book button (min-h-12 + compact padding) */
-const LOGO_HEIGHT_PX = 48
+/** Logo height — inline px so global img { height: auto } does not shrink it */
+const LOGO_HEIGHT_PX = 72
 
 export function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
