@@ -9,59 +9,59 @@ export const SITE_NAME = 'MODA STUDIOS'
 
 const asset = (path: string) => `${import.meta.env.BASE_URL}${path}`
 
-export const HERO_IMAGE = asset('studio.png')
+export const HERO_IMAGE = asset('hero.jpg')
 
 export const GALLERY_ITEMS = [
   {
-    id: 'studio',
-    src: asset('studio.png'),
-    alt: 'MODA STUDIOS interior',
+    id: 'chair',
+    src: asset('gallery/08-chair.jpg'),
+    alt: 'Premium barber chair at MODA STUDIOS',
     span: 'md:col-span-2 md:row-span-2',
   },
   {
-    id: 'shawn',
-    src: asset('barbers/shawn-b.png'),
-    alt: 'Shawn B — precision barbering',
+    id: 'studio',
+    src: asset('gallery/04-studio.jpg'),
+    alt: 'Modern barbershop studio interior',
     span: '',
   },
   {
-    id: 'patrick',
-    src: asset('barbers/patrick-g.png'),
-    alt: 'Patrick G — grooming specialist',
+    id: 'cut',
+    src: asset('gallery/02-cut.jpg'),
+    alt: 'Precision haircut in progress',
     span: '',
-  },
-  {
-    id: 'haircut',
-    src: asset('gallery/haircut.jpg'),
-    alt: 'Precision fade and line work',
-    span: '',
-  },
-  {
-    id: 'scissor',
-    src: asset('gallery/scissor.jpg'),
-    alt: 'Scissor work and texture',
-    span: 'md:col-span-2',
   },
   {
     id: 'beard',
-    src: asset('gallery/beard.jpg'),
-    alt: 'Beard grooming detail',
+    src: asset('gallery/03-beard.jpg'),
+    alt: 'Beard grooming and detailing',
+    span: 'md:col-span-2',
+  },
+  {
+    id: 'style',
+    src: asset('gallery/06-style.jpg'),
+    alt: 'Finished style and texture',
     span: '',
   },
   {
-    id: 'styling',
-    src: asset('gallery/styling.jpg'),
-    alt: 'Finished cut and styling',
+    id: 'tools',
+    src: asset('gallery/05-tools.jpg'),
+    alt: 'Professional barbering tools',
+    span: '',
+  },
+  {
+    id: 'detail',
+    src: asset('gallery/07-detail.jpg'),
+    alt: 'Close-up grooming detail',
     span: '',
   },
 ] as const
 
 export const SERVICE_IMAGES = {
-  moda: asset('studio.png'),
-  haircutBeard: asset('barbers/shawn-b.png'),
-  fade: asset('gallery/haircut.jpg'),
-  texture: asset('gallery/scissor.jpg'),
-  grooming: asset('barbers/patrick-g.png'),
+  moda: asset('gallery/08-chair.jpg'),
+  haircutBeard: asset('gallery/02-cut.jpg'),
+  fade: asset('gallery/09-haircut.jpg'),
+  texture: asset('gallery/06-style.jpg'),
+  grooming: asset('gallery/03-beard.jpg'),
 } as const
 
 export const LOCATION = {
@@ -88,7 +88,7 @@ export type Barber = {
 export const BARBERS: Barber[] = [
   {
     name: 'Shawn B',
-    image: `${import.meta.env.BASE_URL}barbers/shawn-b.png`,
+    image: asset('barbers/shawn-b.png'),
     bookingUrl:
       'https://getsquire.com/booking/book/moda-studios-garden-city/barber/shaun-blends/services',
     bio: 'Precision fades, modern textures, and consultation-first cuts tailored to your look and lifestyle.',
@@ -99,7 +99,7 @@ export const BARBERS: Barber[] = [
   },
   {
     name: 'Patrick G',
-    image: `${import.meta.env.BASE_URL}barbers/patrick-g.png`,
+    image: asset('barbers/patrick-g.png'),
     bookingUrl:
       'https://getsquire.com/discover/barbershop/moda-studios-garden-city/barber/patrick-garcia-3',
     bio: 'The Moda Experience — personal consultation, precision scissor work, and detailed grooming from start to finish.',
