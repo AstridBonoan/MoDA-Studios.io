@@ -31,9 +31,9 @@ export function Navbar() {
       >
         <a
           href="#"
-          className="relative z-10 flex shrink-0 items-end self-stretch transition-opacity hover:opacity-90"
+          className="relative z-10 flex shrink-0 items-center transition-opacity hover:opacity-90"
         >
-          <Logo className="h-[5.75rem] w-auto sm:h-28 md:h-[7.5rem]" />
+          <Logo className="h-20 w-auto translate-y-3 sm:h-24 sm:translate-y-4 md:h-28 md:translate-y-5" />
         </a>
 
         <ul className="hidden items-center gap-8 lg:flex">
