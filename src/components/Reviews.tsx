@@ -42,7 +42,7 @@ const reviews = [
 
 export function Reviews() {
   return (
-    <section id="reviews" className="bg-matte py-24 sm:py-32">
+    <section id="reviews" className="bg-surface py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
           label="Testimonials"
@@ -55,15 +55,15 @@ export function Reviews() {
             <FadeIn
               key={review.author}
               delay={i * 0.06}
-              className="flex flex-col border border-off-white/8 bg-charcoal p-8 transition-colors hover:border-gold/25"
+              className="flex flex-col border border-ink/10 bg-surface-card p-8 shadow-sm transition-colors hover:border-gold/35 hover:shadow-md"
             >
               <p className="text-xs tracking-[0.15em] uppercase text-gold">
                 {review.theme}
               </p>
-              <blockquote className="mt-5 flex-1 font-accent text-xl leading-relaxed text-beige/90 italic">
+              <blockquote className="mt-5 flex-1 font-accent text-xl leading-relaxed text-ink-muted italic">
                 &ldquo;{review.quote}&rdquo;
               </blockquote>
-              <footer className="mt-6 border-t border-off-white/10 pt-4 text-sm tracking-wide text-warm-gray">
+              <footer className="mt-6 border-t border-ink/10 pt-4 text-sm tracking-wide text-ink-subtle">
                 — {review.author}
               </footer>
             </FadeIn>

@@ -55,7 +55,7 @@ const services = [
 
 export function Services() {
   return (
-    <section id="services" className="bg-matte py-24 sm:py-32">
+    <section id="services" className="bg-surface py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
           label="Services"
@@ -68,7 +68,7 @@ export function Services() {
             <FadeIn
               key={service.name}
               delay={i * 0.08}
-              className={`group relative overflow-hidden border border-off-white/8 bg-charcoal transition-colors hover:border-gold/30 ${
+              className={`group relative overflow-hidden border border-ink/10 bg-surface-card shadow-sm transition-colors hover:border-gold/40 hover:shadow-md ${
                 service.featured ? 'md:col-span-2 lg:grid lg:grid-cols-2' : ''
               }`}
             >
@@ -81,26 +81,26 @@ export function Services() {
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/20 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-ink/50 via-ink/10 to-transparent" />
                 {service.featured && (
-                  <span className="absolute left-4 top-4 bg-gold/90 px-3 py-1 text-xs font-medium tracking-[0.15em] uppercase text-matte">
+                  <span className="absolute left-4 top-4 bg-gold px-3 py-1 text-xs font-medium tracking-[0.15em] uppercase text-ink">
                     Signature
                   </span>
                 )}
               </div>
 
               <div className="flex flex-col justify-center p-6 sm:p-8 lg:p-10">
-                <h3 className="font-display text-2xl text-off-white sm:text-3xl">
+                <h3 className="font-display text-2xl text-ink sm:text-3xl">
                   {service.name}
                 </h3>
-                <p className="mt-3 text-sm leading-relaxed text-beige/70 sm:text-base">
+                <p className="mt-3 text-sm leading-relaxed text-ink-muted sm:text-base">
                   {service.description}
                 </p>
                 <ul className="mt-5 space-y-2">
                   {service.includes.map((item) => (
                     <li
                       key={item}
-                      className="flex items-center gap-2 text-sm text-warm-gray"
+                      className="flex items-center gap-2 text-sm text-ink-subtle"
                     >
                       <span className="h-px w-4 bg-gold/60" aria-hidden />
                       {item}

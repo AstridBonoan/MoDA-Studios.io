@@ -7,7 +7,7 @@ const PORTRAIT =
 
 export function MeetBarber() {
   return (
-    <section id="barber" className="bg-matte py-24 sm:py-32">
+    <section id="barber" className="bg-surface py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
           <FadeIn className="lg:col-span-5">
@@ -18,7 +18,7 @@ export function MeetBarber() {
                 className="h-full w-full object-cover object-top"
                 loading="lazy"
               />
-              <div className="absolute inset-0 ring-1 ring-inset ring-off-white/10" />
+              <div className="absolute inset-0 ring-1 ring-inset ring-ink/10" />
             </div>
           </FadeIn>
 
@@ -27,14 +27,14 @@ export function MeetBarber() {
               <p className="font-accent text-lg italic tracking-[0.2em] text-gold uppercase">
                 Meet Your Barber
               </p>
-              <h2 className="mt-3 font-display text-4xl leading-tight text-off-white sm:text-5xl md:text-6xl">
+              <h2 className="mt-3 font-display text-4xl leading-tight text-ink sm:text-5xl md:text-6xl">
                 Expertise You
                 <br />
-                <span className="italic text-beige">Can Trust</span>
+                <span className="italic text-ink-muted">Can Trust</span>
               </h2>
             </FadeIn>
 
-            <FadeIn delay={0.1} className="mt-8 space-y-5 text-base leading-relaxed text-beige/80">
+            <FadeIn delay={0.1} className="mt-8 space-y-5 text-base leading-relaxed text-ink-muted">
               <p>
                 At MODA STUDIOS, barbering is treated as a craft — not a
                 commodity. With years of experience in precision cutting,
@@ -58,12 +58,12 @@ export function MeetBarber() {
               ].map((stat) => (
                 <div
                   key={stat.label}
-                  className="border border-off-white/10 bg-charcoal/50 px-5 py-4"
+                  className="border border-ink/10 bg-surface-card px-5 py-4 shadow-sm"
                 >
                   <p className="text-xs tracking-[0.15em] uppercase text-gold">
                     {stat.label}
                   </p>
-                  <p className="mt-1 font-display text-lg text-off-white">
+                  <p className="mt-1 font-display text-lg text-ink">
                     {stat.value}
                   </p>
                 </div>

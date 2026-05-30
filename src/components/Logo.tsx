@@ -6,13 +6,13 @@ type LogoProps = {
   className?: string
 }
 
-/** Full vertical logo: monogram + MODA + STUDIOS */
+/** Full vertical logo — original black on transparent */
 export function Logo({ className = '' }: LogoProps) {
   return (
     <img
       src={logoSrc}
       alt={SITE_NAME}
-      className={`block h-auto w-auto max-w-none object-contain invert ${className}`}
+      className={`block h-auto w-auto max-w-none object-contain ${className}`}
       style={{ aspectRatio: '346 / 466' }}
     />
   )

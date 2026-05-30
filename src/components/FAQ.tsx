@@ -43,14 +43,14 @@ function FAQItem({
   onToggle: () => void
 }) {
   return (
-    <div className="border-b border-off-white/10">
+    <div className="border-b border-ink/10">
       <button
         type="button"
         onClick={onToggle}
         className="flex min-h-14 w-full items-center justify-between gap-4 py-5 text-left"
         aria-expanded={isOpen}
       >
-        <span className="font-display text-lg text-off-white sm:text-xl">
+        <span className="font-display text-lg text-ink sm:text-xl">
           {question}
         </span>
         <span
@@ -69,7 +69,7 @@ function FAQItem({
             transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
             className="overflow-hidden"
           >
-            <p className="pb-6 text-sm leading-relaxed text-beige/75 sm:text-base">
+            <p className="pb-6 text-sm leading-relaxed text-ink-muted sm:text-base">
               {answer}
             </p>
           </motion.div>
@@ -83,7 +83,7 @@ export function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0)
 
   return (
-    <section id="faq" className="bg-charcoal py-24 sm:py-32">
+    <section id="faq" className="bg-surface-muted py-24 sm:py-32">
       <div className="mx-auto max-w-3xl px-5 sm:px-8">
         <SectionHeading
           label="FAQ"

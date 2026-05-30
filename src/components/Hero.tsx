@@ -13,7 +13,7 @@ export function Hero() {
     offset: ['start start', 'end start'],
   })
   const imageY = useTransform(scrollYProgress, [0, 1], ['0%', '25%'])
-  const overlayOpacity = useTransform(scrollYProgress, [0, 0.5], [0.55, 0.85])
+  const overlayOpacity = useTransform(scrollYProgress, [0, 0.5], [0.3, 0.6])
 
   return (
     <section
@@ -32,7 +32,7 @@ export function Hero() {
 
       <motion.div
         style={{ opacity: overlayOpacity }}
-        className="absolute inset-0 bg-gradient-to-t from-matte via-matte/70 to-matte/30"
+        className="absolute inset-0 bg-gradient-to-t from-surface via-surface/85 to-white/20"
         aria-hidden
       />
 
@@ -50,18 +50,18 @@ export function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.35, duration: 0.8 }}
-          className="max-w-4xl font-display text-5xl leading-[1.05] tracking-tight text-off-white sm:text-6xl md:text-7xl lg:text-8xl"
+          className="max-w-4xl font-display text-5xl leading-[1.05] tracking-tight text-ink sm:text-6xl md:text-7xl lg:text-8xl"
         >
           Modern Grooming.
           <br />
-          <span className="italic text-beige">Elevated.</span>
+          <span className="italic text-ink-muted">Elevated.</span>
         </motion.h1>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.7 }}
-          className="mt-6 max-w-xl text-base leading-relaxed text-beige/90 sm:text-lg md:text-xl"
+          className="mt-6 max-w-xl text-base leading-relaxed text-ink-muted sm:text-lg md:text-xl"
         >
           Precision cuts, tailored consultations, and a barbering experience
           designed around you.

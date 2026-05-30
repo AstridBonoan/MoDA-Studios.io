@@ -42,7 +42,7 @@ const galleryItems = [
 
 export function Gallery() {
   return (
-    <section id="gallery" className="bg-charcoal py-24 sm:py-32">
+    <section id="gallery" className="bg-surface-muted py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
           label="Portfolio"
@@ -63,7 +63,7 @@ export function Gallery() {
                 className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-matte/0 transition-colors duration-300 group-hover:bg-matte/30" />
+              <div className="absolute inset-0 bg-ink/0 transition-colors duration-300 group-hover:bg-ink/10" />
             </FadeIn>
           ))}
         </div>

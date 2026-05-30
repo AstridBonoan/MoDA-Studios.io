@@ -10,9 +10,9 @@ type ButtonProps = {
 
 const variants = {
   primary:
-    'bg-gold text-matte hover:bg-brass border border-gold/30 shadow-lg shadow-gold/10',
+    'bg-gold text-ink hover:bg-brass border border-gold/40 shadow-md shadow-gold/15',
   secondary:
-    'bg-transparent text-off-white border border-off-white/25 hover:border-gold hover:text-gold',
+    'bg-transparent text-ink border border-ink/20 hover:border-gold hover:text-gold',
   outline:
     'bg-transparent text-gold border border-gold/50 hover:bg-gold/10',
 }

@@ -24,7 +24,7 @@ export function Booking() {
   return (
     <section
       id="booking"
-      className="relative overflow-hidden bg-charcoal py-24 sm:py-32"
+      className="relative overflow-hidden bg-surface-muted py-24 sm:py-32"
     >
       <div
         className="absolute inset-0 opacity-20"
@@ -40,10 +40,10 @@ export function Booking() {
           <p className="font-accent text-lg italic tracking-[0.2em] text-gold uppercase">
             Appointments
           </p>
-          <h2 className="mt-3 font-display text-4xl text-off-white sm:text-5xl md:text-6xl">
+          <h2 className="mt-3 font-display text-4xl text-ink sm:text-5xl md:text-6xl">
             Reserve Your Appointment
           </h2>
-          <p className="mt-5 text-base leading-relaxed text-beige/75 sm:text-lg">
+          <p className="mt-5 text-base leading-relaxed text-ink-muted sm:text-lg">
             MODA STUDIOS is appointment-only. Book through Squire for a
             seamless, professional scheduling experience — no walk-ins, no
             waiting room chaos.
@@ -57,10 +57,10 @@ export function Booking() {
                 <span className="font-display text-3xl text-gold/60">
                   {item.step}
                 </span>
-                <h3 className="mt-4 font-display text-xl text-off-white">
+                <h3 className="mt-4 font-display text-xl text-ink">
                   {item.title}
                 </h3>
-                <p className="mt-3 text-sm leading-relaxed text-warm-gray">
+                <p className="mt-3 text-sm leading-relaxed text-ink-subtle">
                   {item.text}
                 </p>
               </div>
@@ -72,7 +72,7 @@ export function Booking() {
           <Button href={BOOKING_URL} className="!px-12 !py-4 !text-sm">
             Book Through Squire
           </Button>
-          <p className="text-xs tracking-wide text-warm-gray">
+          <p className="text-xs tracking-wide text-ink-subtle">
             Secure online booking · Appointment only
           </p>
         </FadeIn>

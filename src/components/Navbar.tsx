@@ -38,7 +38,7 @@ export function Navbar() {
       transition={{ duration: 0.6 }}
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
         scrolled || menuOpen
-          ? 'bg-matte/90 backdrop-blur-md border-b border-off-white/5'
+          ? 'bg-surface/95 backdrop-blur-md border-b border-ink/8 shadow-sm shadow-ink/5'
           : 'bg-transparent'
       }`}
     >
@@ -58,7 +58,7 @@ export function Navbar() {
             <li key={link.href}>
               <a
                 href={link.href}
-                className="text-xs font-medium tracking-[0.15em] uppercase text-beige/80 transition-colors hover:text-gold"
+                className="text-xs font-medium tracking-[0.15em] uppercase text-ink-muted transition-colors hover:text-gold"
               >
                 {link.label}
               </a>
@@ -71,7 +71,7 @@ export function Navbar() {
             href={INSTAGRAM_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xs tracking-[0.12em] uppercase text-beige/70 transition-colors hover:text-gold"
+            className="text-xs tracking-[0.12em] uppercase text-ink-muted transition-colors hover:text-gold"
             aria-label="Instagram"
           >
             Instagram
@@ -91,13 +91,13 @@ export function Navbar() {
           <span className="sr-only">Menu</span>
           <div className="flex w-6 flex-col gap-1.5">
             <span
-              className={`block h-px bg-off-white transition-transform ${menuOpen ? 'translate-y-2 rotate-45' : ''}`}
+              className={`block h-px bg-ink transition-transform ${menuOpen ? 'translate-y-2 rotate-45' : ''}`}
             />
             <span
-              className={`block h-px bg-off-white transition-opacity ${menuOpen ? 'opacity-0' : ''}`}
+              className={`block h-px bg-ink transition-opacity ${menuOpen ? 'opacity-0' : ''}`}
             />
             <span
-              className={`block h-px bg-off-white transition-transform ${menuOpen ? '-translate-y-2 -rotate-45' : ''}`}
+              className={`block h-px bg-ink transition-transform ${menuOpen ? '-translate-y-2 -rotate-45' : ''}`}
             />
           </div>
         </button>
@@ -107,7 +107,7 @@ export function Navbar() {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          className="fixed inset-0 top-[5.75rem] z-40 bg-matte/98 sm:top-24 lg:hidden"
+          className="fixed inset-0 top-[5.75rem] z-40 bg-surface sm:top-24 lg:hidden"
         >
           <ul className="flex flex-col gap-1 px-6 py-8">
             {navLinks.map((link) => (
@@ -115,13 +115,13 @@ export function Navbar() {
                 <a
                   href={link.href}
                   onClick={() => setMenuOpen(false)}
-                  className="block min-h-12 py-3 font-display text-2xl text-off-white transition-colors hover:text-gold"
+                  className="block min-h-12 py-3 font-display text-2xl text-ink transition-colors hover:text-gold"
                 >
                   {link.label}
                 </a>
               </li>
             ))}
-            <li className="mt-6 border-t border-off-white/10 pt-6">
+            <li className="mt-6 border-t border-ink/10 pt-6">
               <Button href={BOOKING_URL} className="w-full">
                 Book Appointment
               </Button>

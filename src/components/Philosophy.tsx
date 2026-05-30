@@ -24,7 +24,7 @@ const STUDIO_IMAGE =
 
 export function Philosophy() {
   return (
-    <section id="philosophy" className="bg-charcoal py-24 sm:py-32">
+    <section id="philosophy" className="bg-surface-muted py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
           <FadeIn className="relative aspect-[4/5] overflow-hidden lg:aspect-auto lg:min-h-[640px]">
@@ -34,7 +34,7 @@ export function Philosophy() {
               className="absolute inset-0 h-full w-full object-cover"
               loading="lazy"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-charcoal/20 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-surface/30 to-transparent" />
           </FadeIn>
 
           <div>
@@ -42,12 +42,12 @@ export function Philosophy() {
               <p className="font-accent text-lg italic tracking-[0.2em] text-gold uppercase">
                 The Studio
               </p>
-              <h2 className="mt-3 font-display text-4xl leading-tight text-off-white sm:text-5xl">
+              <h2 className="mt-3 font-display text-4xl leading-tight text-ink sm:text-5xl">
                 Crafted Around
                 <br />
-                <span className="italic text-beige">Your Experience</span>
+                <span className="italic text-ink-muted">Your Experience</span>
               </h2>
-              <p className="mt-6 text-base leading-relaxed text-beige/75 sm:text-lg">
+              <p className="mt-6 text-base leading-relaxed text-ink-muted sm:text-lg">
                 MODA STUDIOS is not a walk-in shop. It is a modern grooming
                 studio built on consultation, precision, and quality over
                 volume. The focus is the experience — how you feel when you
@@ -59,10 +59,10 @@ export function Philosophy() {
               {points.map((point, i) => (
                 <FadeIn key={point.title} delay={i * 0.1}>
                   <div className="border-l border-gold/40 pl-6">
-                    <h3 className="font-display text-xl text-off-white">
+                    <h3 className="font-display text-xl text-ink">
                       {point.title}
                     </h3>
-                    <p className="mt-2 text-sm leading-relaxed text-warm-gray sm:text-base">
+                    <p className="mt-2 text-sm leading-relaxed text-ink-subtle sm:text-base">
                       {point.text}
                     </p>
                   </div>
